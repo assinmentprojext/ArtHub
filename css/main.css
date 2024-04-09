@@ -1,0 +1,178 @@
+/*헤더 전체 설정*/
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 84px;
+}
+
+/*아트 허브 로고*/
+header > #logoImg {
+    width: 110px;
+    height: 37.9px;
+}
+
+/*헤더 중앙 링크*/
+header > #hub {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-size: 20px;
+}
+
+/*우측 메뉴 시작*/
+header > #menus {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+/*음악바 구현 시작*/
+header > #menus > #musicLogo {
+    display: flex;
+    align-items: center;
+}
+header > #menus > #musicLogo > .musicBar {
+    background-color: #5285a2;
+    width: 2px;
+    margin: 0px 2px 0px 0px;
+}
+header > #menus > #musicLogo > .musicBar:first-child,
+header > #menus > #musicLogo > .musicBar:nth-child(2),
+header > #menus > #musicLogo > .musicBar:nth-child(9) {
+    height: 1px;
+}
+header > #menus > #musicLogo > .musicBar:nth-child(3),
+header > #menus > #musicLogo > .musicBar:nth-child(6) {
+    height: 6px;
+}
+header > #menus > #musicLogo > .musicBar:nth-child(4) {
+    height: 12px;
+}
+header > #menus > #musicLogo > .musicBar:nth-child(5) {
+    height: 16px;
+}
+header > #menus > #musicLogo > .musicBar:nth-child(7) {
+    height: 3px;
+}
+header > #menus > #musicLogo > .musicBar:nth-child(8) {
+    height: 4px;
+}
+/*음악바 구현 끝*/
+/*우측 메뉴 끝*/
+
+/*배너 시작*/
+main > #banner {
+    /*이미지 사이즈는 509*375.4*/
+    display: grid;
+    position: relative;
+    grid-template-columns: 80px 509px 200px 80px;
+    grid-template-rows: 375.4px 40px;
+}
+
+/*footer 시작*/
+#footerInner {
+    padding: 50px 110px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 35px;
+}
+#footerInner > #footerLogo {
+    width: 116.48px;
+    height: 51px;
+    align-self: top;
+}
+#footerInner > #infoContainer {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+/* 세로줄 설정 */
+.verticalLine {
+    display: inline-block;
+    width: 2px;
+    height: 16px;
+    margin: 0px 20px;
+    background-color: #e5e5e5;
+}
+/*링크 모음 시작*/
+#infoContainer > #linkContainer {
+    margin-bottom: 10px;
+}
+#infoContainer > #linkContainer > .linkSection {
+    float: left;
+}
+#infoContainer > #copyRight {
+    font-family: "Noto Serif", sans-serif;
+}
+/*링크 모음 끝*/
+/* 주소 텍스트 */
+#infoContainer > #addressContainer {
+    display: flex;
+    margin-bottom: 30px;
+}
+/* 드롭다운 시작 */
+#footerInner > #dropDownWrapper > #dropDownTitle {
+    width: 200px;
+    padding: 16px 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e5e5e5;
+    cursor: pointer;
+}
+#footerInner > #dropDownWrapper > #dropDownTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+#footerInner > #dropDownWrapper #dropDownIcon {
+    /* 삼각형 만들기https://fromnowwon.tistory.com/entry/css-triangle-bubble */
+    width: 0px;
+    height: 0px;
+    /*일반 삼각형일 땐 bottom만, 역삼각형일 땐 top만 색을 갖는다. */
+    border-top: 10px solid #5285a2;
+    border-bottom: 10px solid transparent;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    /*일반 삼각형일 땐 -5px, 역삼각형일 땐 5px*/
+    transform: translate(0, 5px);
+}
+#footerInner > #dropDownWrapper > #familyLink {
+    cursor: pointer;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e5e5e5;
+    padding: 20px;
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 135px;
+    /*컨텐츠가 영역을 넘어가면 스크롤 생성*/
+    overflow-y: auto;
+    transform: translate(0, -28px);
+}
+#familyLink > .dropDownContents {
+    line-height: 35px;
+}
+#familyLink > .dropDownContents > .dropDownLink {
+    color: #999;
+}
+/*스크롤바 설정 시작*/
+/*width를 설정해야 스크롤바 뒷 배경이 숨겨진다*/
+#familyLink::-webkit-scrollbar {
+    width: 5px;
+}
+#familyLink::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+#familyLink::-webkit-scrollbar-thumb {
+    background: #5285a2;
+    border-radius: 12px 12px 12px 12px;
+}
+#familyLink::-webkit-scrollbar-button:vertical:no-button {
+    display: none;
+}
