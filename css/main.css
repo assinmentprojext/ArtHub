@@ -70,6 +70,71 @@ main > #banner {
     grid-template-columns: 80px 509px 200px 80px;
     grid-template-rows: 375.4px 40px;
 }
+/*배너 양쪽 화살표 시작*/
+main > #banner > #bannerLeftArrow {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+main > #banner > #bannerRightArrow {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+/*배너 양쪽 화살표 끝*/
+/*배너 이미지 시작*/
+main > #banner > #bannerImgContainer {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-rows: 375.4px;
+    grid-template-columns: repeat(10, 509px);
+    overflow: hidden;
+}
+/*-900%에서 마지막 그림이 나온다. -1000%에서 첫 그림이 나오게*/
+/* @keyframes bannerSlide {
+    100% {
+        transform: translate(-100%, 0);
+    }
+} */
+main > #banner .bannerWrapper {
+    /* animation-name: bannerSlide;
+    animation-duration: 1s;
+    animation-fill-mode: forwards; */
+}
+main > #banner .bannerImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 배너 이미지 끝 */
+/*배너 텍스트 시작*/
+main > #banner > #bannerText {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+/*배너 텍스트 끝*/
+/*배너 슬라이더 시작*/
+main > #banner > #bannerSlider {
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 8;
+}
+/*배너 슬라이더 끝*/
 
 /*footer 시작*/
 #footerInner {
