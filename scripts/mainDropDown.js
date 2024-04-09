@@ -14,23 +14,9 @@ let dropDownTitle = document.getElementById("dropDownTitle");
 let familyLink = document.getElementById("familyLink");
 let triangle = document.getElementById("dropDownIcon");
 let dropDownStat = false;
-// dropDownTitle.onclick = function menuUnfold() {
-//     if (dropDownStat == false) {
-//         familyLink.style.display = "flex";
-//         triangle.style.borderTopColor = "transparent";
-//         triangle.style.borderBottomColor = "#5285a2";
-//         triangle.style.transform = "translate(0, -5px)";
-//         dropDownStat = true;
-//     } else {
-//         familyLink.style.display = "none";
-//         triangle.style.borderTopColor = "#5285a2";
-//         triangle.style.borderBottomColor = "transparent";
-//         triangle.style.transform = "translate(0, 5px)";
-//         dropDownStat = false;
-//     }
-// };
+
 //menuUnfold() 이렇게 괄호 붙이면 지금 당장 함수를 실행하라는 뜻이므로 onclick과 상관없이 함수가 실행된다
-dropDownTitle.onclick = menuUnfold; 
+dropDownTitle.onclick = menuUnfold;
 function menuUnfold() {
     if (dropDownStat == false) {
         familyLink.style.display = "flex";
