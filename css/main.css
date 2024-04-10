@@ -67,7 +67,7 @@ main > #banner {
     /*이미지 사이즈는 509*375.4*/
     display: grid;
     position: relative;
-    grid-template-columns: 80px 509px 200px 80px;
+    grid-template-columns: 80px 709px 80px;
     grid-template-rows: 375.4px 40px;
 }
 /*배너 양쪽 화살표 시작*/
@@ -83,24 +83,31 @@ main > #banner > #bannerLeftArrow {
 main > #banner > #bannerRightArrow {
     grid-row-start: 1;
     grid-row-end: 2;
-    grid-column-start: 4;
-    grid-column-end: 5;
+    grid-column-start: 3;
+    grid-column-end: 4;
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
 }
 /*배너 양쪽 화살표 끝*/
-/*배너 이미지 시작*/
-main > #banner > #bannerImgContainer {
-    grid-row-start: 1;
-    grid-row-end: 2;
+/*배너 메인 시작(그림과 텍스트 전체)*/
+main > #banner > #bannerMain {
+    display: grid;
+    grid-template-columns: 509px 200px;
     grid-column-start: 2;
     grid-column-end: 3;
+}
+/*배너 메인 끝*/
+/*배너 이미지 시작*/
+main > #banner > #bannerMain > #bannerImgContainer {
+    grid-column-start: 1;
+    grid-column-end: 2;
     display: grid;
     grid-template-rows: 375.4px;
     grid-template-columns: repeat(10, 509px);
     overflow: hidden;
 }
+
 /*-900%에서 마지막 그림이 나온다. -1000%에서 첫 그림이 나오게*/
 /* @keyframes bannerSlide {
     100% {
@@ -117,24 +124,22 @@ main > #banner .bannerImg {
     height: 100%;
     object-fit: cover;
 }
-
 /* 배너 이미지 끝 */
 /*배너 텍스트 시작*/
-main > #banner > #bannerText {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 3;
-    grid-column-end: 4;
+main > #banner > #bannerMain > #bannerText {
+    grid-column-start: 2;
+    grid-column-end: 3;
 }
 /*배너 텍스트 끝*/
-/*배너 슬라이더 시작*/
-main > #banner > #bannerSlider {
-    grid-row-start: 5;
-    grid-row-end: 6;
-    grid-column-start: 1;
-    grid-column-end: 8;
+/*배너 탭 버튼 시작*/
+main > #banner > #bannerTabBtn {
+    width: 100%;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
 }
-/*배너 슬라이더 끝*/
+/*배너 탭 버튼 끝*/
 
 /*footer 시작*/
 #footerInner {
