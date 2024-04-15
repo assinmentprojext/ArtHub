@@ -1,10 +1,12 @@
 /*헤더 전체 설정*/
 header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 84px;
+    padding-left: 110px;
+    padding-right: 110px;
 }
 
 /*아트 허브 로고*/
@@ -61,14 +63,18 @@ header > #menus > #musicLogo > .musicBar:nth-child(8) {
 }
 /*음악바 구현 끝*/
 /*우측 메뉴 끝*/
-
+main {
+    width: 100%;
+}
 /*배너 시작*/
 main > #banner {
     /*이미지 사이즈는 509*375.4*/
     display: grid;
     position: relative;
-    grid-template-columns: 80px 709px 80px;
+    grid-template-columns: 80px 809px 80px;
     grid-template-rows: 375.4px 40px;
+    margin-top: 40px;
+    margin-left: 60px;
 }
 /*배너 양쪽 화살표 시작*/
 main > #banner > #bannerLeftArrow {
@@ -93,7 +99,7 @@ main > #banner > #bannerRightArrow {
 /*배너 메인 시작(그림과 텍스트 전체)*/
 main > #banner > #bannerMain {
     display: grid;
-    grid-template-columns: 509px 200px;
+    grid-template-columns: 509px 300px;
     grid-column-start: 2;
     grid-column-end: 3;
 }
@@ -130,18 +136,55 @@ main > #banner > #bannerMain > #bannerText {
     grid-column-start: 2;
     grid-column-end: 3;
 }
+main > #banner > #bannerMain > #bannerText > #caption {
+    font-size: 1.5625vw;
+    padding: 0px 3.02vw 0px 1.5625vw;
+}
+main > #banner > #bannerMain > #bannerText > #theme {
+    font-size: 0.8333vw;
+    color: #5285a2;
+}
+main > #banner > #bannerMain > #bannerText > #title {
+    font-weight: bold;
+    font-size: 27px;
+
+    padding: 20px 20px 40px;
+}
+main > #banner > #bannerMain > #bannerText > #paintInfoList > .bannerLi {
+    padding: 20px 20px;
+    display: flex;
+    border-bottom: solid;
+    border-color: rgba(0, 0, 0, 0.25);
+    border-width: 1px;
+}
+
 /*배너 텍스트 끝*/
 /*배너 탭 버튼 시작*/
-main > #banner > #bannerTabBtn {
+main > #banner > #bannerTabBtnContainer {
     width: 100%;
+    height: 40px;
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 2;
     grid-column-end: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main > #banner > #bannerTabBtnContainer > #tabBtn > .point {
+    background-color: #5285a2;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
 }
 /*배너 탭 버튼 끝*/
-
+main > #artLesson {
+    width: 30%;
+}
 /*footer 시작*/
+footer {
+    width: 100%;
+}
 #footerInner {
     padding: 50px 110px 20px;
     display: flex;
